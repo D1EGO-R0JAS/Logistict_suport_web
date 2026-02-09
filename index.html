@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos el complemento de su operación:
+    	 Asesorias en comercio exterior, Soporte en comercio exterior, Liberaciones, Desembalajes, Exportaciones, Muisca, Representación en puertos y aeropuerto.
+    	 Digitación Muisca, Pagos y Liberaciones, Proceso de Exportación Aérea, Proceso OTM, Liberación de Documentos, Importación Aérea en  colombia">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Logistict Support</title>
+</head>
+<body>
+    <header class="main-header" id="header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./src/images/Logistic_Logo.png" alt="Logistic Support Logo" class="logo-img">
+            </a>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menú</span>
+            <div class="hamburger"></div>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" data-visible="false">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link">Enlaces de Interés</a></li>
+                <li><a href="#" class="nav-link">Portafolio</a></li>
+                <li><a href="#" class="nav-link">Quienes Somos</a></li>
+                <li><a href="#" class="nav-link">Sedes</a></li>
+                <li><a href="#" class="contact-btn">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <section class="hero-container">
+        <picture class="hero-background">
+            <source media="(min-width: 2500px)" srcset="./src/images/Hero_Logistict_Grande.jpg">
+            <source media="(min-width: 768px)" srcset="./src/images/Hero_Logistic_Intermedia.jpg">
+            <img src="./src/images/Hero_Logistic_Paquena.jpg" alt="Imagen Hero de fondo donde esta un puerto de referencia">
+        </picture>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">
+            Bienvenidos al mundo del <span class="highlight">soporte logístico</span>
+            </h1>
+            <p class="hero-subtitle">Somos el complemento de su Operación</p>
+            <div class="hero-actions">
+                <a href="#portafolio" class="btn-primary">Nuestros Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <aside class="trm-widget-container" aria-label="Convertidor de Divisas Logistic Support">
+            <button class="trm-trigger" id="trmTrigger" onclick="toggleTrmMenu()" aria-expanded="false">
+                <span class="trm-trigger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span><span class="trm-trigger-text">TRM</span>
+            </button>
+            <section class="trm-menu" id="trmMenu" aria-hidden="true">
+                <header class="trm-header">
+                    <div class="trm-header-content">
+                        <h2>Tasas de Mercado</h2>                <p>Logistic Support</p>
+                    </div>
+                    <button class="trm-close" onclick="toggleTrmMenu()">&times;</button>
+                </header>
+            <article class="trm-body">
+                <form class="trm-converter" onsubmit="event.preventDefault();">
+                <div class="input-group">
+                    <label for="amount">Monto a convertir</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="amount" value="1" step="any">
+                        <select id="baseCurrency">
+                            <option value="COP" selected>COP</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="trm-swap-container">
+                    <button type="button" class="btn-swap" onclick="swapCurrencies()" aria-label="Invertir divisas">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4M7 4L3 8M7 4L11 8M17 8v12M17 20l4-4M17 20l-4-4"></path></svg>
+                    </button>
+                </div>
+                <div class="input-group">
+                    <label for="targetCurrency">Resultado estimado</label>
+                    <div class="input-wrapper result">
+                        <input type="text" id="resultValue" readonly>
+                        <select id="targetCurrency">
+                            <option value="USD" selected>USD</option>
+                            <option value="COP">COP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                        </select>
+                    </div>
+                </div>
+                </form>
+                <div class="trm-grid">
+                    <div class="rate-card">
+                        <span class="currency-label">USD/COP</span>
+                        <strong id="quick-usd">---</strong>
+                    </div>
+                    <div class="rate-card">
+                        <span class="currency-label">EUR/COP</span>
+                        <strong id="quick-eur">---</strong>
+                    </div>
+                    <div class="rate-card">
+                        <span class="currency-label">JPY/COP</span>
+                        <strong id="quick-jpy">---</strong>
+                    </div>
+                </div>
+            </article>
+            </section>
+        </aside>
+        <section class="ports-section" aria-labelledby="ports-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="ports-title" class="title-main"><span>Puertos</span> Importantes del País</h2>
+                    <p class="subtitle">Encuentre información de los puertos más importantes del país</p>
+                </header>
+                <div class="ports-grid">
+                    <article class="port-card">
+                        <a href="https://www.puertocartagena.com/es" target="_blank" rel="noopener noreferrer" class="port-link">
+                            <picture class="port-picture">
+                            <img src="./src/images/Puerto_Cartagena.png" alt="Terminal de contenedores Puerto de Cartagena" loading="lazy" width="400" height="500">
+                            </picture>
+                            <div class="port-info">
+                                <h3 class="port-name">Puerto de Cartagena</h3>
+                                <span class="port-tag">Hub Caribe</span>
+                                <p class="port-description">Principal hub logístico y de transbordo de la región caribeña.</p>
+                            </div>
+                        </a>
+                    </article>
+                <article class="port-card">
+                    <a href="http://www.sprbun.com/web/portal/inicio" target="_blank" rel="noopener noreferrer" class="port-link">
+                    <picture class="port-picture">
+                        <img src="./src/images/spb.jpg" alt="Sociedad Portuaria de Buenaventura" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="port-info">
+                        <h3 class="port-name">Puerto de Buenaventura</h3>
+                        <span class="port-tag">Puerta al Pacífico</span>
+                        <p class="port-description">El terminal más importante del Pacífico colombiano.</p>
+                    </div>
+                    </a>
+                </article>
+                <article class="port-card">
+                    <a href="https://www.puertodebarranquilla.com" target="_blank" rel="noopener noreferrer" class="port-link">
+                    <picture class="port-picture">
+                        <img src="./src/images/puerto_de_barranquilla.jpg" alt="Puerto de Barranquilla multimodal" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="port-info">
+                        <h3 class="port-name">Puerto de Barranquilla</h3>
+                        <span class="port-tag">Multimodal</span>
+                        <p class="port-description">Plataforma logística integral con acceso al Río Magdalena.</p>
+                    </div>
+                    </a>
+                </article>
+                <article class="port-card">
+                    <a href="https://www.spsm.com.co" target="_blank" rel="noopener noreferrer" class="port-link">
+                    <picture class="port-picture">
+                        <img src="./src/images/Puerto_SantaMarta.jpg" alt="Puerto de Santa Marta calado profundo" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="port-info">
+                        <h3 class="port-name">Puerto de Santa Marta</h3>
+                        <span class="port-tag">Calado Natural</span>
+                        <p class="port-description">Especialistas en carga a granel y logística ferroviaria eficiente.</p>
+                    </div>
+                    </a>
+                </article>
+                </div>
+            </div>
+        </section>
+        <section class="about-us" id="about-us">
+            <div class="container">
+                <header class="about-header">
+                <h2 class="section-title">Acerca de Nosotros</h2>
+                <p>"La unica Forma de hacer un GRAN trabajo es AMAR lo que haces". Stive Jobs</p>
+                <div class="title-underline"></div>
+                </header>
+
+                <div class="timeline">
+                <article class="timeline-item reveal">
+                    <div class="timeline-img">
+                    <img src="./src/images/Mision.jpg" alt="Misión Logistic Support" loading="lazy">
+                    </div>
+                    <div class="timeline-content">
+                    <span class="badge">Propósito</span>
+                    <h3>Misión</h3>
+                    <p>Somos una compañía solidaria y responsable con su entorno manteniendo innovación constante, además del aprendizaje y desarrollo de las nuevas políticas del comercio internacional, haciendo todos los procesos con pasión contando con el conocimiento y calidad para mantenerse en el mercado y tener éxito.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-img">
+                    <img src="./src/images/Vision.png" alt="Visión Logistic Support" loading="lazy">
+                    </div>
+                    <div class="timeline-content">
+                    <span class="badge">Futuro</span>
+                    <h3>Visión</h3>
+                    <p>Consolidarnos como una compañía dirigida al servicio, competitividad y productividad; que brinde soluciones y confianza, agilizando y automatizando procesos que faciliten las actividades inherentes al comercio internacional, que permita dar a nuestros clientes la confidencialidad, el soporte y desarrollo sostenible de sus metas.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-img">
+                    <img src="./src/images/Compromiso.png" alt="Compromiso de Calidad" loading="lazy">
+                    </div>
+                    <div class="timeline-content">
+                    <span class="badge">Valores</span>
+                    <h3>Compromiso y Política De Calidad</h3>
+                    <p>LOGISTIC SUPPORT SAS se encuentra comprometida en cumplir los lineamientos de las partes interesadas propendiendo para lograr crecimiento a nivel comercial, mediante la capacitación y actualización continua sobre legislación aduanera, cumpliendo con los tiempos pactados basados en el mejoramiento continuo.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-img">
+                    <img src="./src/images/Gestion.png" alt="Gestión Eficaz" loading="lazy">
+                    </div>
+                    <div class="timeline-content">
+                    <span class="badge">Eficiencia</span>
+                    <h3>Gestión</h3>
+                    <p>Con el fin de estar a la vanguardia de la legislación en comercio exterior y cumplir las necesidades del cliente, la compañía cuenta con un sistema de gestión de eficaz que le permite la mejora continua en sus procesos contando con el compromiso de la alta gerencia y de sus colaboradores.</p>
+                    </div>
+                </article>
+                </div>
+                <div class="about-footer reveal">
+                <p class="cta-text">Sé parte del Progreso</p>
+                </div>
+            </div>
+        </section>
+    </main>
+<script src="./src/index.js"></script>
+</body>
+</html>
