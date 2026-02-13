@@ -98,6 +98,70 @@ document.addEventListener('DOMContentLoaded', () => {
     updateConversion();
 });
 
+/**------------------------------------------------ */
+/** Seccion de puertos y aeropuertos */
+const track1 = document.getElementById('carouselTrack1');
+const nextBtn1 = document.querySelector('.next1');
+const prevBtn1 = document.querySelector('.prev1');
+const track2 = document.getElementById('carouselTrack2');
+const nextBtn2 = document.querySelector('.next2');
+const prevBtn2 = document.querySelector('.prev2');
+
+let isAutoPlaying = true;
+
+const autoPlay = () => {
+  if (!isAutoPlaying) return;
+  const cardWidth = track1.querySelector('.card').offsetWidth + 24;
+  const cardWidth2 = track2.querySelector('.card').offsetWidth + 24;
+  if (track1.scrollLeft + track1.offsetWidth >= track1.scrollWidth) {
+    track1.scrollTo({ left: 0, behavior: 'smooth' });
+  }else if(track2.scrollLeft + track2.offsetWidth >= track2.scrollWidth){
+    track2.scrollTo({ left: 0, behavior: 'smooth' });
+  }else {
+    track1.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    track2.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  }
+};
+
+let autoPlayTimer = setInterval(autoPlay, 4000);
+
+// Detener auto-play al interactuar
+
+const stopAutoPlay = () => {
+  isAutoPlaying = false;
+  clearInterval(autoPlayTimer);
+};
+
+nextBtn1.addEventListener('click', () => {
+  stopAutoPlay();
+  const cardWidth = track1.querySelector('.card').offsetWidth + 24;
+  track1.scrollBy({ left: cardWidth, behavior: 'smooth' });
+});
+
+prevBtn1.addEventListener('click', () => {
+  stopAutoPlay();
+  const cardWidth = track1.querySelector('.card').offsetWidth + 24;
+  track1.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+});
+
+nextBtn2.addEventListener('click', () => {
+  stopAutoPlay();
+  const cardWidth = track2.querySelector('.card').offsetWidth + 24;
+  track2.scrollBy({ left: cardWidth, behavior: 'smooth' });
+});
+
+prevBtn2.addEventListener('click', () => {
+  stopAutoPlay();
+  const cardWidth = track2.querySelector('.card').offsetWidth + 24;
+  track2.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+});
+
+// Soporte para pausa en hover (Desktop)
+track1.addEventListener('mouseenter', () => (isAutoPlaying = false));
+track1.addEventListener('mouseleave', () => (isAutoPlaying = true));
+track2.addEventListener('mouseenter', () => (isAutoPlaying = false));
+track2.addEventListener('mouseleave', () => (isAutoPlaying = true));
+
 /** --------------------------------------------------- */
 /* ACERCA DE NOSOTROS*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -117,3 +181,130 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 });
+
+/** ------------------------------------------------ */
+/** PORTAFOLIO DE SERVICIOS */
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.service-card');
+
+  cards.forEach(card => {
+    // Soporte para dispositivos móviles (Toggeable)
+    card.addEventListener('click', function(e) {
+      if (window.innerWidth < 1024) {
+        this.classList.toggle('is-active');
+        // Cerrar otras tarjetas abiertas
+        cards.forEach(c => { if(c !== this) c.classList.remove('is-active'); });
+      }
+    });
+
+    // Accesibilidad por teclado
+    card.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') card.classList.toggle('is-active');
+    });
+  });
+});
+
+/*------------------------------------------------- */
+/* SECCION DE LAS SEDES */
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.location-card');
+  const mainMap = document.getElementById('main-map');
+
+  mainMap.addEventListener('load', () => {
+    mainMap.style.opacity = '1';
+  });
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+
+      cards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      const newMapUrl = card.dataset.map;
+
+      if (mainMap.getAttribute('src') === newMapUrl) return;
+
+      mainMap.style.opacity = '0';
+
+      setTimeout(() => {
+        mainMap.setAttribute('src', newMapUrl);
+      }, 300);
+
+    });
+  });
+});
+
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.location-card');
+  const mainMap = document.getElementById('main-map');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      // 1. Gestionar estados visuales
+      cards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      // 2. Actualizar Mapa con transición suave
+      const newMapUrl = card.getAttribute('data-map');
+      
+      // Pequeño fade out/in para UX
+      mainMap.style.opacity = '0';
+      
+      setTimeout(() => {
+        mainMap.setAttribute('src', newMapUrl);
+        mainMap.onload = () => {
+          mainMap.style.opacity = '1';
+        };
+      }, 300);
+    });
+  });
+});
+*/
+/*-------------------------------------------------*/
+/* TRacking envios */
+const API_URL = "https://script.google.com/macros/s/AKfycbzO7hzhfVYkzvC3MRMIgn36qD2z5G8GdzyLDXqBd_jq8FrtRKbNsBUk1L7tRumElXkU/exec";
+
+  function buscarFile() {
+    const file = document.getElementById("fileInput").value.trim();
+    const resultado = document.getElementById("resultado");
+
+    if (!file) {
+      alert("Por favor ingrese un FILE");
+      return;
+    }
+
+    resultado.innerHTML = `<p class="loading">Consultando información...</p>`;
+
+    fetch(`${API_URL}?file=${encodeURIComponent(file)}`)
+      .then(response => response.json())
+      .then(data => {
+
+        if (data.error) {
+          resultado.innerHTML = `<div class="error">${data.error}</div>`;
+          return;
+        }
+
+        let html = `
+          <div class="card">
+            <h2>Información del Servicio</h2>
+        `;
+
+        for (let key in data) {
+          html += `
+            <div class="row">
+              <div class="label">${key}</div>
+              <div class="value">${data[key] || "-"}</div>
+            </div>
+          `;
+        }
+
+        html += `</div>`;
+        resultado.innerHTML = html;
+      })
+      .catch(err => {
+        resultado.innerHTML = `<div class="error">Error consultando el servicio</div>`;
+        console.error(err);
+      });
+  }

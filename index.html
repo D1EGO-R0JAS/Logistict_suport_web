@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Somos el complemento de su operación:
     	 Asesorias en comercio exterior, Soporte en comercio exterior, Liberaciones, Desembalajes, Exportaciones, Muisca, Representación en puertos y aeropuerto.
-    	 Digitación Muisca, Pagos y Liberaciones, Proceso de Exportación Aérea, Proceso OTM, Liberación de Documentos, Importación Aérea en  colombia">
+    	 Digitación Muisca, Pagos y Liberaciones, Proceso de Exportación Aérea, Proceso OTM, Liberación de Documentos, Importación Aérea en  colombia"><!--
          <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">-->
          <link rel="stylesheet" href="./src/styles/style.css">
     <title>Logistict Support</title>
 </head>
@@ -26,11 +26,11 @@
         </button>
         <nav class="primary-navigation" id="primary-navigation" data-visible="false">
             <ul class="nav-list">
-                <li><a href="#" class="nav-link">Enlaces de Interés</a></li>
-                <li><a href="#" class="nav-link">Portafolio</a></li>
-                <li><a href="#" class="nav-link">Quienes Somos</a></li>
-                <li><a href="#" class="nav-link">Sedes</a></li>
-                <li><a href="#" class="contact-btn">Contacto</a></li>
+                <li><a href="#tracking" class="nav-link">Enlaces de Interés</a></li>
+                <li><a href="#services-title" class="nav-link">Portafolio</a></li>
+                <li><a href="#about-us" class="nav-link">Quienes Somos</a></li>
+                <li><a href="#sedes" class="nav-link">Sedes</a></li>
+                <li><a href="https://wa.me/573203083764?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría" class="contact-btn">Contacto</a></li>
             </ul>
         </nav>
     </div>
@@ -55,7 +55,7 @@
 
     <main>
         <aside class="trm-widget-container" aria-label="Convertidor de Divisas Logistic Support">
-            <button class="trm-trigger" id="trmTrigger" onclick="toggleTrmMenu()" aria-expanded="false">
+            <button class="trm-trigger" id="trmTrigger" aria-label="Abrir menú TRM" onclick="toggleTrmMenu()" aria-expanded="false">
                 <span class="trm-trigger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span><span class="trm-trigger-text">TRM</span>
             </button>
             <section class="trm-menu" id="trmMenu" aria-hidden="true">
@@ -114,63 +114,217 @@
             </article>
             </section>
         </aside>
-        <section class="ports-section" aria-labelledby="ports-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="ports-title" class="title-main"><span>Puertos</span> Importantes del País</h2>
-                    <p class="subtitle">Encuentre información de los puertos más importantes del país</p>
-                </header>
-                <div class="ports-grid">
-                    <article class="port-card">
-                        <a href="https://www.puertocartagena.com/es" target="_blank" rel="noopener noreferrer" class="port-link">
-                            <picture class="port-picture">
-                            <img src="./src/images/Puerto_Cartagena.png" alt="Terminal de contenedores Puerto de Cartagena" loading="lazy" width="400" height="500">
-                            </picture>
-                            <div class="port-info">
-                                <h3 class="port-name">Puerto de Cartagena</h3>
-                                <span class="port-tag">Hub Caribe</span>
-                                <p class="port-description">Principal hub logístico y de transbordo de la región caribeña.</p>
-                            </div>
-                        </a>
-                    </article>
-                <article class="port-card">
-                    <a href="http://www.sprbun.com/web/portal/inicio" target="_blank" rel="noopener noreferrer" class="port-link">
-                    <picture class="port-picture">
-                        <img src="./src/images/spb.jpg" alt="Sociedad Portuaria de Buenaventura" loading="lazy" width="400" height="500">
-                    </picture>
-                    <div class="port-info">
-                        <h3 class="port-name">Puerto de Buenaventura</h3>
-                        <span class="port-tag">Puerta al Pacífico</span>
-                        <p class="port-description">El terminal más importante del Pacífico colombiano.</p>
-                    </div>
-                    </a>
-                </article>
-                <article class="port-card">
-                    <a href="https://www.puertodebarranquilla.com" target="_blank" rel="noopener noreferrer" class="port-link">
-                    <picture class="port-picture">
-                        <img src="./src/images/puerto_de_barranquilla.jpg" alt="Puerto de Barranquilla multimodal" loading="lazy" width="400" height="500">
-                    </picture>
-                    <div class="port-info">
-                        <h3 class="port-name">Puerto de Barranquilla</h3>
-                        <span class="port-tag">Multimodal</span>
-                        <p class="port-description">Plataforma logística integral con acceso al Río Magdalena.</p>
-                    </div>
-                    </a>
-                </article>
-                <article class="port-card">
-                    <a href="https://www.spsm.com.co" target="_blank" rel="noopener noreferrer" class="port-link">
-                    <picture class="port-picture">
-                        <img src="./src/images/Puerto_SantaMarta.jpg" alt="Puerto de Santa Marta calado profundo" loading="lazy" width="400" height="500">
-                    </picture>
-                    <div class="port-info">
-                        <h3 class="port-name">Puerto de Santa Marta</h3>
-                        <span class="port-tag">Calado Natural</span>
-                        <p class="port-description">Especialistas en carga a granel y logística ferroviaria eficiente.</p>
-                    </div>
-                    </a>
-                </article>
+        <div class="whatsapp-widget">
+        <a href="https://wa.me/573203083764?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría" 
+           target="_blank" 
+           class="whatsapp-button" aria-label="Boton de whatsapp">
+            <div class="button-content">
+                <div class="whatsapp-icon">
+                    <svg viewBox="0 0 24 24" width="54" height="54">
+                        <path fill="white" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/>
+                    </svg>
                 </div>
             </div>
+        </a>
+    </div>
+        <section class="ports-section" aria-labelledby="ports-title">
+            <section class="logistics-carousel" aria-labelledby="carousel-title">
+                <h2 id="carousel-title" class="section-title">Puertos y Aeropuertos Donde Operamos</h2>    
+                <div class="carousel-wrapper">
+                <h3>Puertos Cartagena - Barranquilla - Sant Marta</h3>
+                <button class="nav-btn prev1" aria-label="Anterior">❮</button>      
+                <div class="carousel-track" id="carouselTrack1">
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Puerto_Cartagena.png" alt="Sociedad Portuaria Cartagena" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Cartagena</h3>
+                        <p>Sociedad Portuaria Cartagena</p>
+                        <a href="https://www.puertocartagena.com/" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Compas_Cartagena.jfif" alt="Puerto Compas Cartagena" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Cartagena</h3>
+                        <p>Compas</p>
+                        <a href="https://clientes.compas.com.co" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Contecar_Cartagena.png" alt="Puerto Contecar Cartagena" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Cartagena</h3>
+                        <p>Contecar</p>
+                        <a href="https://www.puertocartagena.com/es/nosotros/empresas-del-grupo/empresas-contecar" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/puerto_bahia.webp" alt="Puerto Bahia Cartagena" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Cartagena</h3>
+                        <p>Puerto Bahia</p>
+                        <a href="https://puertobahia.com.co" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/puerto_de_barranquilla.jpg" alt="Puerto Barranquilla" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Barranquilla</h3>
+                        <p>Sociedad Portuaria de Barranquilla.</p>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Palermo_Barranquilla.jpg" alt="Puerto Palermo Barranquilla" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Barranquilla</h3>
+                        <p>Palermo</p>
+                        <a href="https://palermosociedadportuaria.com" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/compas-barranquilla.jpg" alt="Puerto Barranquilla Compas" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Barranquilla</h3>
+                        <p>Compas</p>
+                        <a href="https://clientes.compas.com.co/COMPAS-Online/Situación-Portuaria-COMPAS/COMPAS-Barranquilla" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Puerto_SantaMarta.jpg" alt="Puerto Santa Marta" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Santa Marta</h3>
+                        <p>Sociedad Portuaria</p>
+                        <a href="https://www.spsm.com.co" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/SMITCO.webp" alt="International Terminal Company SMITCO" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Santa Marta</h3>
+                        <p>International Terminal Company SMITCO</p>
+                        <a href="https://www.smitco.com.co" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                </div>
+                <button class="nav-btn next1" aria-label="Siguiente">❯</button>
+                </div>
+                <div class="carousel-wrapper">
+                <h3>Otros Puertos o Aeropuertos</h3>
+                <button class="nav-btn prev2" aria-label="Anterior">❮</button>      
+                <div class="carousel-track" id="carouselTrack2">
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/puerto_buenaventra.jpg" alt="Puerto Buenaventura" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Buenaventura</h3>
+                        <p>Sociedad Portuaria</p>
+                        <a href="http://www.sprbun.com/web/portal/inicio" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/tcbuen-buenaventura.jfif" alt="Puerto Tcbuen Buenaventura" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Buenaventura</h3>
+                        <p>Tcbuen</p>
+                        <a href="https://www.apmterminals.com/es/buenaventura/" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/aguadulce_buenaventura.jpeg" alt="Puerto Agua Dulce Buenaventura" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Buenaventura</h3>
+                        <p>Aguadulce</p>
+                        <a href="https://www.puertoaguadulce.com" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/puerto_antioquia.jpg" alt="Puerto Antioquia" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Turbo</h3>
+                        <p>Puerto Antioquía</p>
+                        <a href="https://puertoantioquia.com.co" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/aeropuerto-dorado.jpg" alt="Aeropuerto internacional El dorado" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Bogota</h3>
+                        <p>Aeropuerto internacional El dorado</p>
+                        <a href="https://eldorado.aero" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/aeropuerto_alfonso_bonilla_aragon_0.jpeg" alt="Aeropuerto internacional Alfonso Bonilla Aragón" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Cali</h3>
+                        <p>Aeropuerto internacional Alfonso Bonilla Aragón</p>
+                        <a href="https://www.ani.gov.co/enlace/aeropuertos/aeropuerto-internacional-alfonso-bonilla-aragon-2504" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Aeropuerto_internacional_Jose_María_Cordova.jpg" alt="Aeropuerto internacional Jose Maria Cordova" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Medellin</h3>
+                        <p>Aeropuerto internacional José María Córdova</p>
+                        <a href="https://www.aeropuertorionegro.co" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Ernesto_cortissoz.jpg" alt="Aeropuerto internacional Ernesto cortissoz" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Barranquilla</h3>
+                        <p>Aeropuerto internacional Ernesto cortissoz</p>
+                        <a href="https://www.ani.gov.co/aeropuerto-internacional-ernesto-cortissoz-aumenta-su-competitividad-con-mas-frecuencias-en" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                    <article class="card">
+                    <picture>
+                        <img src="./src/images/Rafael_Nunez.jpg" alt="Aeropuerto internacional Rafael Núñez" loading="lazy" width="400" height="500">
+                    </picture>
+                    <div class="card-overlay">
+                        <h3>Cartagena</h3>
+                        <p> Aeropuerto internacional Rafael Núñez</p>
+                        <a href="https://aeropuertocartagena.com.co" target="_blank" rel="noopener noreferrer" class="btn-link">Visitar Web</a>
+                    </div>
+                    </article>
+                </div>
+                <button class="nav-btn next2" aria-label="Siguiente">❯</button>
+                </div>
+            </section>
         </section>
         <section class="about-us" id="about-us">
             <div class="container">
@@ -230,7 +384,241 @@
                 </div>
             </div>
         </section>
+        <section class="services-portfolio" aria-labelledby="services-title">
+            <div class="container">
+                <header class="services-header">
+                <h2 id="services-title">Nuestros Servicios Especializados</h2>
+                <p>Excelencia operativa en cada etapa de la cadena de suministro.</p>
+                </header>
+                <div class="services-grid">
+                <article class="service-card" tabindex="0">
+                    <div class="card-image">
+                    <img src="./src/images/Logistica_Aerea.jpg" alt="Operaciones en aeropuerto y carga aérea" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                    <div class="content-inner">
+                        <span class="service-tag">Logística Aérea</span>
+                        <h3>Operaciones en Aeropuerto</h3>
+                        <p class="service-description">
+                        Gestionamos exportaciones, importaciones y cabotajes con soporte logístico integral en aeropuertos. Incluye verificación de carga, elaboración de etiquetas DGD, embalaje especializado y liberación de guías ante aerolíneas con altos estándares operativos.
+                        </p>
+                    </div>
+                    </div>
+                </article>
+                <article class="service-card" tabindex="0">
+                    <div class="card-image">
+                    <img src="./src/images/Logistica_terrestre.jpg" alt="Operaciones Terrestre" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                    <div class="content-inner">
+                        <span class="service-tag">Logística Terrestre</span>
+                        <h3>Operación Logística Nacional</h3>
+                        <p class="service-description">
+                        Servicio de transporte y manipulación de mercancías a nivel nacional con cargue, descargue, llenado y vaciado de vehículos, montacargas y embalaje profesional. Incluye registro fotográfico para trazabilidad y control logístico.
+                        </p>
+                    </div>
+                    </div>
+                </article>
+                <article class="service-card" tabindex="0">
+                    <div class="card-image">
+                    <img src="./src/images/Logistica_portuaria.jpg" alt="Logística portuaria y contenedores" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                    <div class="content-inner">
+                        <span class="service-tag">Logística Portuaria</span>
+                        <h3>Operaciones Marítimas</h3>
+                        <p class="service-description">
+                        Coordinación integral de procesos marítimos en puertos colombianos: consolidación y desconsolidación, gestión MUISCA, radicación ante navieras, manejo de cargas LCL y FCL, y operaciones técnicas en contenedores.
+                        </p>
+                    </div>
+                    </div>
+                </article>
+                <article class="service-card" tabindex="0">
+                    <div class="card-image">
+                    <img src="./src/images/Gestion_documental.jpg" alt="Gestion Documental" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                    <div class="content-inner">
+                        <span class="service-tag">Gestión Documental</span>
+                        <h3>Trámites de Comercio Exterior</h3>
+                        <p class="service-description">
+                        Asesoría y gestión de documentos ante entidades portuarias y aduaneras, enrolamiento y carnetización de personal, inscripción en plataformas oficiales y acompañamiento en procesos administrativos del sector logístico.
+                        </p>
+                    </div>
+                    </div>
+                </article>
+                <article class="service-card" tabindex="0">
+                    <div class="card-image">
+                    <img src="./src/images/soporte_aduanero.jpg" alt="Soporte Aduanero" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                    <div class="content-inner">
+                        <span class="service-tag">Soporte Aduanero</span>
+                        <h3>Operaciones en Depósitos</h3>
+                        <p class="service-description">
+                        Apoyo operativo en preinspecciones, aforos, retiro de mercancías, separación de bultos y operaciones logísticas en depósitos, zonas francas y aerolíneas con cuadrillas especializadas y registro fotográfico.
+                        </p>
+                    </div>
+                    </div>
+                </article>
+                <article class="service-card" tabindex="0">
+                    <div class="card-image">
+                    <img src="./src/images/politica_calidad.png" alt="Certificación ISO 9001" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                    <div class="content-inner">
+                        <span class="service-tag">Política de Calidad</span>
+                        <h3>Calidad y Compromiso Operativo</h3>
+                        <p class="service-description">LOGISTIC SUPPORT S.A.S. ofrece servicios de comercio exterior con altos estándares de calidad, mejora continua y cumplimiento normativo, respaldados por un sistema de gestión certificado bajo la norma ISO 9001.</p>
+                    </div>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+        <section class="locations-section" id="sedes">
+            <div class="container">
+                <header class="section-header">
+                <h2 class="section-title">Nuestras <span>Sedes</span></h2>
+                <p>Telefonos Fijo: <span>6017223284</span> Celular: <span>313 347 0563</span> - <span>313 804 3878</span></p>
+                </header>
+
+                <div class="locations-grid">
+                <aside class="locations-list" aria-label="Lista de sedes">
+                    <button class="location-card active" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.478605661794!2d-74.13100892624081!3d4.686573341782424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c9f3fe70bd3%3A0xae0a5d03c15c1357!2zQ3JhLiA5OCAjIDI1Ry02NCwgRm9udGliw7NuLCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!5e0!3m2!1ses!2sco!4v1770719013907!5m2!1ses!2sco" data-city="Bogotá">
+                    <picture>
+                        <source srcset="./src/images/1.jpg">
+                        <img src="./src/images/1.jpg" alt="Sede Principal Bogotá" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Bogotá D.C. (Principal)</h3>
+                        <p>Carrera 98 # 25G-64 TORRE A OF 101B</p>
+                    </div>
+                    </button>
+                    <button class="location-card" data-map="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1164.4883205207043!2d-74.835944521822!3d10.974223562945175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDU4JzI2LjkiTiA3NMKwNTAnMDYuMiJX!5e0!3m2!1ses!2sco!4v1770720367643!5m2!1ses!2sco" data-city="Barranquilla">
+                    <picture>
+                        <img src="./src/images/2.jpg" alt="Sede Barranquilla" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Barranquilla</h3>
+                        <p>Calle 22 # 31-90 Soledad Barrio el Hipodromo</p>
+                    </div>
+                    </button>
+                    <button class="location-card" data-map="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3924.165324834753!2d-75.53950222619143!3d10.408440865875983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDI0JzMwLjQiTiA3NcKwMzInMTIuOSJX!5e0!3m2!1ses!2sco!4v1770720448848!5m2!1ses!2sco" data-city="Cartagena">
+                    <picture>
+                        <img src="./src/images/3.jpg" alt="Sede Cartagena" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Cartagena</h3>
+                        <p>Calle 25 #24A-16 Oficina 2305 Edificio Twins Bay Torre Bancolombia</p>
+                    </div>
+                    </button>
+                    <button class="location-card" data-map="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3980.623201102274!2d-77.08061662624335!3d3.8906592481496656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwNTMnMjYuNCJOIDc3wrAwNCc0MS4wIlc!5e0!3m2!1ses!2sco!4v1770720514506!5m2!1ses!2sco" data-city="Buenaventura">
+                    <picture>
+                        <img src="./src/images/4.jpg" alt="Sede Buenaventura" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Buenaventura</h3>
+                        <p>Centro Empresarial Del Pacifico - Carrera 2nda # 3-19 Oficina 409</p>
+                    </div>
+                    </button>
+                    <button class="location-card" data-map="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15866.639579876473!2d-75.43688038102997!3d6.176264336523393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTAnMzIuMSJOIDc1wrAyNSczOC44Ilc!5e0!3m2!1ses!2sco!4v1770720580756!5m2!1ses!2sco" data-city="Medellin">
+                    <picture>
+                        <img src="./src/images/5.jpg" alt="Sede Medellin" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Medellin</h3>
+                        <p>Zona de carga Aeropuerto Jose Maria Córdoba Edificio Nuevo</p>
+                    </div>
+                    </button>
+                    <button class="location-card" data-map="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3913.1944022086946!2d-74.2160809261796!3d11.247105150338111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDE0JzQ5LjYiTiA3NMKwMTInNDguNiJX!5e0!3m2!1ses!2sco!4v1770720610772!5m2!1ses!2sco" data-city="Santa Marta">
+                    <picture>
+                        <img src="./src/images/6.jpg" alt="Sede Santa Marta" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Santa Marta</h3>
+                        <p>Calle 11 # 1C-23 Edificio Posihuelca Oficina 307</p>
+                    </div>
+                    </button>
+                    <button class="location-card" data-map="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3975.669147523779!2d-75.68975472624032!3d4.826752440554451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMzYuMyJOIDc1wrA0MScxMy45Ilc!5e0!3m2!1ses!2sco!4v1770720642169!5m2!1ses!2sco" data-city="Pereira">
+                    <picture>
+                        <img src="./src/images/7.jpg" alt="Sede Pereira" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Pereira</h3>
+                        <p>M 16 C 8A CAMPESTRE D</p>
+                    </div>
+                    </button>
+                    <button class="location-card" data-map="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3982.581880922184!2d-76.53748842624422!3d3.451351551223172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMjcnMDQuOSJOIDc2wrAzMicwNS43Ilc!5e0!3m2!1ses!2sco!4v1770720675027!5m2!1ses!2sco" data-city="Cali">
+                    <picture>
+                        <img src="./src/images/8.jpg" alt="Sede Cali" loading="lazy">
+                    </picture>
+                    <div class="card-info">
+                        <h3>Cali</h3>
+                        <p>Carrera 4 # 8-39 Oficina 202 Edificio Benjamín Herrera</p>
+                    </div>
+                    </button>        
+                    </aside>
+
+                <section class="map-viewer">
+                    <article class="map-container">
+                    <iframe title="Mapa de ubicación en Google Maps"
+                        id="main-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.478605661794!2d-74.13100892624081!3d4.686573341782424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c9f3fe70bd3%3A0xae0a5d03c15c1357!2zQ3JhLiA5OCAjIDI1Ry02NCwgRm9udGliw7NuLCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!5e0!3m2!1ses!2sco!4v1770719013907!5m2!1ses!2sco" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    </article>
+                </section>
+                </div>
+            </div>
+        </section>
+        <section id="tracking">
+            <div class="container-tracking">
+                <h2>Tracking de su Carga</h2>
+                <div class="search-box">
+                    <input type="text" id="fileInput" placeholder="Ingrese el FILE">
+                    <button onclick="buscarFile()">Consultar</button>
+                </div>
+                <div id="resultado" class="result"></div>
+            </div>
+        </section>
+        <section class="brand-pillars" aria-labelledby="pillars-title">
+            <h2 class="pillars-title" class="sr-only">Nuestros <span>Valores</span></h2>
+            <div class="container pillars-grid">
+                <div class="pillar-item">
+                <div class="pillar-icon">🛡️</div>
+                <h3>Confiabilidad</h3>
+                </div>
+                <div class="pillar-item">
+                <div class="pillar-icon">🤝</div>
+                <h3>Compromiso</h3>
+                </div>
+                <div class="pillar-item">
+                <div class="pillar-icon">📈</div>
+                <h3>Seguimiento</h3>
+                </div>
+                <div class="pillar-item">
+                <div class="pillar-icon">🫂</div>
+                <h3>Acompañamiento</h3>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p class="copy">Copyright &copy; Logistic Support 2018</p>
+            <div class="footer-links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
 <script src="./src/index.js"></script>
 </body>
 </html>
