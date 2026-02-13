@@ -668,17 +668,6 @@ header .container {
 .service-card:hover .card-image {
   transform: scale(1.1);
 }
-
-/* Responsive Adaptations */
-@media (max-width: 768px) {
-  .card-content {
-    transform: translateY(0); /* Siempre visible en móvil para UX */
-    background: linear-gradient(0deg, rgba(13,71,161,1) 40%, transparent 100%);
-  }
-  .service-description {
-    opacity: 1;
-  }
-}
 /*-----------------------------------------------------------*/
 /* SECCION DE SEDES */
 .locations-section {
