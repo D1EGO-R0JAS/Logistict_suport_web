@@ -115,6 +115,7 @@ header .container {
     }
     .nav-list { 
         flex-direction: column; 
+        padding-top: 1.4rem;
     }
 }
 
@@ -362,7 +363,6 @@ header .container {
   scroll-snap-align: center;
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
   aspect-ratio: 4/5;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
@@ -937,30 +937,116 @@ header .container {
 }
 
 /* Footer */
-.main-footer {
-  padding: 2rem 1.5rem;
-  background: var(--dark);
-  color: white;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
+/* Estilos del Footer */
+        .main-footer {
+            background-color: #121212;
+            color: #a1a1aa;
+            padding: 60px 20px 30px;
+        }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile First: 1 columna */
+            gap: 40px;
+        }
 
-.footer-links a{
-    text-decoration: none;
-    color: white;
-    margin-left: 1rem;
-}
+        /* Títulos con acento visual */
+        .footer-section h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-@media (min-width: 768px) {
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
+        .footer-section h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+
+        /* Seccion Contacto */
+        .contact-group { margin-bottom: 15px; }
+        .label { 
+            display: block; 
+            font-size: 0.75rem; 
+            font-weight: bold; 
+            color: #3b82f6;
+            margin-bottom: 5px;
+        }
+        .footer-link {
+            display: block;
+            color: #a1a1aa;
+            text-decoration: none;
+            margin-bottom: 5px;
+            transition: var(--transition);
+        }
+        .footer-link:hover { color: #ffffff; }
+
+        /* Seccion Gobierno */
+        .gov-list { list-style: none; padding: 0; }
+        .gov-list li { margin-bottom: 12px; }
+        .gov-list a {
+            color: #a1a1aa;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .gov-list a:hover {
+            color: #ffffff;
+            transform: translateX(8px);
+        }
+        .gov-list a::before { content: '→'; margin-right: 10px; color: var(--accent); }
+
+        /* Grid de Decretos (Optimizado para Mobile) */
+        .decretos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+            gap: 10px;
+        }
+        .decreto-btn {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+        .decreto-btn:hover {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Copyright */
+        .copyright {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* --- MEDIA QUERIES (Desktop) --- */
+        @media (min-width: 768px) {
+            .footer-container {
+                grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+            }
+            .decretos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
